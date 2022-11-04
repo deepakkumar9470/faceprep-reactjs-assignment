@@ -1,0 +1,89 @@
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.nav_link {
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+}
+
+.homeContainer {
+  height: 100vh;
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.userCard {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+  background: #F9F9F9;
+  box-shadow: -1px 0px 7px -4px rgba(0, 0, 0, 0.75);
+
+}
+
+.userCard img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid rgba(134, 131, 131, 0.75);
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.userCard h3 {
+  font-size: 18px;
+  color: #9D9D9D;
+  padding: 0px 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+
+
+@media screen and (max-width : 480px) {
+  .homeContainer {
+    width: 60%;
+
+    .userCard {
+      width: 100%;
+      margin: 10px;
+      padding: 10px;
+
+    }
+
+    .userCard h3 {
+      font-size: 20px;
+      color: #252424;
+    }
+
+    .userCard img {
+      width: 60px;
+      height: 60px;
+
+    }
+  }
+
+
+
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
